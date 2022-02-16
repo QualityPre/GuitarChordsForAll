@@ -1,0 +1,269 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  /*
+        Purple: hsl(250, 66%, 75%)
+        Blue: hsl(207, 90%, 72%)
+        Pink: hsl(356, 66%, 75%)
+        Teal: hsl(174, 63%, 62%)
+  */
+  --first-hue: 250;
+  --sat: 66%;
+  --lig: 75%;
+  --second-hue: 219;
+  --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
+  --first-color-alt: hsl(var(--first-hue), var(--sat), 71%); /* -4% */
+  --title-color: hsl(var(--second-hue), 15%, 95%);
+  --text-color: hsl(var(--second-hue), 8%, 75%);
+  --text-color-light: hsl(var(--second-hue), 4%, 55%);
+  --body-color: hsl(var(--second-hue), 48%, 8%);
+  --container-color: hsl(var(--second-hue), 32%, 12%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 5px | 1rem = 10px ...*/
+  --body-font: "Dancing Script", cursive;
+  --biggest-font-size: 5.2rem;
+  --h1-font-size: 3.2rem;
+  --h2-font-size: 2.8rem;
+  --h3-font-size: 2rem;
+  --normal-font-size: 1.6rem;
+  --small-font-size: 1.4rem;
+  --smaller-font-size: 1.2rem;
+  --tiny-font-size: 1rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semibold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+/* Responsive typography
+@media screen and (min-width: 968px) {
+  :root {
+    --biggest-font-size: 2.5rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+} */
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 10px;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body {
+  background-color: var(--body-color);
+  color: var(--text-color);
+  transition: 0.4s;
+  height: 100vh;
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+  font-weight: var(--font-semibold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+button:hover {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.main {
+  overflow: hidden;
+}
+
+.section {
+  padding: 4.5rem 0 1rem;
+}
+
+.section__title,
+.section__subtitle {
+  text-align: center;
+}
+
+.section__title {
+  font-size: var(--h1-font-size);
+  color: var(--first-color);
+  margin-bottom: 2rem;
+}
+
+.section__subtitle {
+  display: block;
+  font-size: var(--h2-font-size);
+  color: var(--text-color-light);
+}
+
+/*=============== HEADER ===============*/
+.guitar__header--title {
+  font-size: var(--biggest-font-size);
+  color: var(--first-color);
+  text-align: center;
+  letter-spacing: 0.3rem;
+}
+
+/*=============== CHORD ===============*/
+.guitar__chord--container {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: column;
+}
+
+.guitar__chord--chord {
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.guitar__chord--image {
+  background-color: hsl(var(--second-hue), 15%, 95%);
+  width: 455px;
+  height: 438px;
+  border-radius: 25px;
+}
+
+/*=============== BUTTONS ===============*/
+
+.swiper-slide {
+  text-align: center;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper {
+  width: 100%;
+  height: 300px;
+  margin: 20px 0;
+}
+
+.guitar__buttons--container {
+  height: 90px;
+  width: 450px;
+  background: hsl(var(--second-hue), 15%, 95%);
+  border-radius: 3rem;
+}
+
+.guitar__buttons--button {
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-semibold);
+  transition: 0.4s;
+  color: var(--first-color);
+
+  border-radius: inherit;
+}
+.guitar__buttons--button:hover {
+  transform: translateY(-10px);
+  color: var(--first-color-alt);
+}
+
+.swiper-pagination {
+  transform: translateY(5px);
+}
+.swiper-pagination-bullet {
+  background-color: var(--body-color);
+}
+.swiper-pagination-bullet-active {
+  background-color: var(--container-color);
+}
+
+/*=============== THEME ===============*/
+
+/*========== Variables Dark theme ==========*/
+
+/*========== 
+    Color changes in some parts of 
+    the website, in light theme
+==========*/
+
+/*=============== BREAKPOINTS ===============*/
+@media screen and (max-width: 525px) {
+  .section {
+    padding: 2.5rem 0 1rem;
+  }
+  .section__subtitle {
+    font-size: var(--h3-font-size);
+    margin: -12px;
+  }
+  .guitar__header--title {
+    font-size: var(--h2-font-size);
+
+    letter-spacing: 0.2rem;
+  }
+  .guitar__buttons--container {
+    height: 58px;
+    width: 220px;
+  }
+  .guitar__buttons--button {
+    transform: translateY(-6px);
+  }
+}

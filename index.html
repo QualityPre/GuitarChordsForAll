@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FAVICON ===============-->
+    <link
+      rel="shortcut icon"
+      href="./assets/img/favicon.png"
+      type="image/x-icon"
+    />
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+
+    <title>Guitar Chords</title>
+  </head>
+  <body>
+    <!--=============== HEADER ===============-->
+    <header class="header" id="header">
+      <div class="guitar__header--container section container">
+        <div class="guitar__header--title">Guitar Chords for all</div>
+      </div>
+    </header>
+
+    <!--=============== MAIN ===============-->
+    <main class="main">
+      <!--=============== CHORD ===============-->
+      <div class="guitar__chord--container section container">
+        <p class="section__subtitle">Chord</p>
+        <div class="guitar__chord--chord">
+          <div class="guitar__chord--image" id="chord--canvas" />
+        </div>
+      </div>
+
+      <!--=============== Buttons ===============-->
+      <p class="section__subtitle">Beginner Chords</p>
+      <div class="guitar__buttons--container swiper mySwiper">
+        <div class="swiper-wrapper">
+          <button class="guitar__buttons--button swiper-slide" data-chord="A">
+            A
+          </button>
+          <button class="guitar__buttons--button swiper-slide" data-chord="C">
+            C
+          </button>
+          <button class="guitar__buttons--button swiper-slide" data-chord="D">
+            D
+          </button>
+          <button class="guitar__buttons--button swiper-slide" data-chord="E">
+            E
+          </button>
+          <button class="guitar__buttons--button swiper-slide" data-chord="G">
+            G
+          </button>
+          <button
+            class="guitar__buttons--button swiper-slide"
+            data-chord="A min"
+          >
+            A min
+          </button>
+          <button
+            class="guitar__buttons--button swiper-slide"
+            data-chord="D min"
+          >
+            D min
+          </button>
+          <button
+            class="guitar__buttons--button swiper-slide"
+            data-chord="E min"
+          >
+            E min
+          </button>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </main>
+    <!--=============== FOOTER ===============-->
+    <footer class="footer"></footer>
+
+    <!--=============== CHORD RAPHAEL JS ===============-->
+    <script type="text/javascript" src="./assets/js/raphael.js"></script>
+    <script type="text/javascript" src="./assets/js/raphael.chord.js"></script>
+    <!--=============== SWIPER JS ===============-->
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <!--=============== MAIN JS ===============-->
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
